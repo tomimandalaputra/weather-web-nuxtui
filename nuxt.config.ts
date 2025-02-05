@@ -14,6 +14,11 @@ export default defineNuxtConfig({
   colorMode: {
     preference: 'light',
   },
+  runtimeConfig: {
+    public: {
+      apiKey: '',
+    },
+  },
   compatibilityDate: '2025-02-05',
   nitro: {
     compressPublicAssets: true,
