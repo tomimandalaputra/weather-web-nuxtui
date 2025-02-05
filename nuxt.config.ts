@@ -15,6 +15,7 @@ export default defineNuxtConfig({
     preference: 'light',
   },
   runtimeConfig: {
+    apiBaseUrl: '',
     public: {
       apiKey: '',
     },
