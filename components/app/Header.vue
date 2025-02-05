@@ -1,5 +1,9 @@
 <script setup lang="ts">
+import { storeToRefs } from 'pinia'
+
 const colorMode = useColorMode()
+
+const { q } = storeToRefs(useWeatherStore())
 
 const vModle = computed({
   get() {
@@ -67,6 +71,7 @@ const uiInputModal = {
       >
         <div class="w-full">
           <UInput
+            v-model="q"
             placeholder="Search City"
             icon="i-heroicons-magnifying-glass"
           />
@@ -79,6 +84,7 @@ const uiInputModal = {
     v-model="isOpen"
   >
     <UInput
+      v-model="q"
       placeholder="Search City"
       icon="i-heroicons-magnifying-glass"
       :ui="uiInputModal"
