@@ -1,6 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ['@nuxt/ui', '@nuxt/eslint', '@nuxtjs/google-fonts'],
+  modules: [
+    '@nuxt/ui',
+    '@nuxt/eslint',
+    '@nuxtjs/google-fonts',
+    '@pinia/nuxt',
+  ],
   components: [
     '~/components',
   ],
@@ -52,5 +57,8 @@ export default defineNuxtConfig({
     families: {
       Montserrat: '100..900',
     },
+  },
+  pinia: {
+    storesDirs: ['./stores/**'],
   },
 })
