@@ -11,7 +11,7 @@ const uiInputModal = {
 
 const isOpen = ref<boolean>(false)
 
-const { q } = storeToRefs(useWeatherStore())
+const { params } = storeToRefs(useWeatherStore())
 </script>
 
 <template>
@@ -72,7 +72,7 @@ const { q } = storeToRefs(useWeatherStore())
       >
         <div class="w-full">
           <UInput
-            v-model="q"
+            v-model="params.q"
             placeholder="Search City"
             icon="i-heroicons-magnifying-glass"
           />
@@ -86,7 +86,7 @@ const { q } = storeToRefs(useWeatherStore())
     v-model="isOpen"
   >
     <UInput
-      v-model="q"
+      v-model="params.q"
       placeholder="Search City"
       icon="i-heroicons-magnifying-glass"
       :ui="uiInputModal"
