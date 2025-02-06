@@ -1,21 +1,6 @@
 <script setup lang="ts">
 import { storeToRefs } from 'pinia'
 
-const colorMode = useColorMode()
-
-const { q } = storeToRefs(useWeatherStore())
-
-const vModle = computed({
-  get() {
-    return colorMode.value === 'dark'
-  },
-  set() {
-    colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'
-  },
-})
-
-const isOpen = ref<boolean>(false)
-
 const uiInputModal = {
   color: {
     white: {
@@ -23,6 +8,10 @@ const uiInputModal = {
     },
   },
 }
+
+const isOpen = ref<boolean>(false)
+
+const { q } = storeToRefs(useWeatherStore())
 </script>
 
 <template>
@@ -42,24 +31,36 @@ const uiInputModal = {
       </NuxtLink>
 
       <div class="md:order-2">
-        <div class="hidden md:flex items-center space-x-3 rtl:space-x-reverse">
-          <ClientOnly>
-            <UToggle
-              v-model="vModle"
-              off-icon="i-iconoir-sea-and-sun"
-              on-icon="i-iconoir-half-moon"
+        <div class="hidden md:flex items-center space-x-1 rtl:space-x-reverse">
+          <ColorScheme>
+            <UButton
+              v-if="$colorMode.value === 'dark'"
+              icon="i-iconoir-half-moon"
+              variant="ghost"
+              color="black"
+              @click="$colorMode.preference = 'light'"
             />
-          </ClientOnly>
+
+            <UButton
+              v-if="$colorMode.value === 'light'"
+              icon="i-iconoir-sun-light"
+              variant="ghost"
+              color="black"
+              @click="$colorMode.preference = 'dark'"
+            />
+          </ColorScheme>
 
           <UButton
             icon="i-iconoir-github"
             variant="ghost"
+            color="black"
           />
         </div>
 
         <UButton
           icon="i-iconoir-menu"
           variant="ghost"
+          color="black"
           class="md:hidden"
           @click="isOpen = true"
         />
@@ -81,6 +82,7 @@ const uiInputModal = {
   </nav>
 
   <UModal
+    id="modal--header"
     v-model="isOpen"
   >
     <UInput
@@ -96,27 +98,29 @@ const uiInputModal = {
         Theme
       </h6>
 
-      <UButton
-        :disabled="colorMode.value === 'light'"
-        icon="i-iconoir-sea-and-sun"
-        variant="ghost"
-        color="black"
-        label="Light"
-        class="w-full"
-        size="sm"
-        @click="colorMode.value = 'light'"
-      />
+      <ColorScheme>
+        <UButton
+          :disabled="$colorMode.value === 'light'"
+          icon="i-iconoir-sun-light"
+          variant="ghost"
+          color="black"
+          label="Light"
+          class="w-full"
+          size="sm"
+          @click="$colorMode.value = 'light'"
+        />
 
-      <UButton
-        :disabled="colorMode.value === 'dark'"
-        icon="i-iconoir-half-moon"
-        variant="ghost"
-        color="black"
-        label="Dark"
-        class="w-full"
-        size="sm"
-        @click="colorMode.value = 'dark'"
-      />
+        <UButton
+          :disabled="$colorMode.value === 'dark'"
+          icon="i-iconoir-half-moon"
+          variant="ghost"
+          color="black"
+          label="Dark"
+          class="w-full"
+          size="sm"
+          @click="$colorMode.value = 'dark'"
+        />
+      </ColorScheme>
     </div>
   </UModal>
 </template>
