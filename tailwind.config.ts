@@ -17,7 +17,7 @@ export default <Partial<Config>>{
   plugins: [
     // Select the icon collections at https://icones.js.org/ when you want to use
     iconsPlugin({
-      collections: getIconCollections(['heroicons', 'iconoir']),
+      collections: getIconCollections(['heroicons', 'iconoir', 'wi']),
     }),
   ],
 }

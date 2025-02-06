@@ -30,6 +30,7 @@
     "@commitlint/config-conventional": "^19.7.1",
     "@egoist/tailwindcss-icons": "^1.9.0",
     "@iconify-json/iconoir": "^1.2.7",
+    "@iconify-json/wi": "^1.2.1",
     "@nuxt/devtools": "^2.0.0-beta.6",
     "@types/eslint": "^9.6.1",
     "postcss": "^8.5.1",
