@@ -5,6 +5,7 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     '@nuxtjs/google-fonts',
     '@pinia/nuxt',
+    '@vueuse/nuxt',
   ],
   components: [
     '~/components',
