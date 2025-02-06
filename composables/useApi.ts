@@ -49,5 +49,5 @@ export function useApi<T>(
 
   const params = defu(options, defaults)
 
-  return useFetch(`${url}.json`, params)
+  return useFetch(url, params)
 }
