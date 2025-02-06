@@ -4,7 +4,8 @@ import type { UseFetchOptions } from 'nuxt/app'
 export interface ErrorApiResponse {
   status: number
   body: {
-    ok: boolean
+    cod: string
+    message: string
   }
 }
 
