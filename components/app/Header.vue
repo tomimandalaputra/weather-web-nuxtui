@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { storeToRefs } from 'pinia'
-
 const uiInputModal = {
   color: {
     white: {
@@ -10,8 +8,7 @@ const uiInputModal = {
 }
 
 const isOpen = ref<boolean>(false)
-
-const { params } = storeToRefs(useWeatherStore())
+const store = useWeatherStore()
 </script>
 
 <template>
@@ -72,7 +69,7 @@ const { params } = storeToRefs(useWeatherStore())
       >
         <div class="w-full">
           <UInput
-            v-model="params.q"
+            v-model="store.searchQuery"
             placeholder="Search City"
             icon="i-heroicons-magnifying-glass"
           />
@@ -86,7 +83,7 @@ const { params } = storeToRefs(useWeatherStore())
     v-model="isOpen"
   >
     <UInput
-      v-model="params.q"
+      v-model="store.searchQuery"
       placeholder="Search City"
       icon="i-heroicons-magnifying-glass"
       :ui="uiInputModal"
