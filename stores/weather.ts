@@ -1,9 +1,16 @@
 export const useWeatherStore = defineStore('weather', () => {
-  const q = ref<string>('')
+  const { public: { apiKey } } = useRuntimeConfig()
 
-  function $reset() {
-    q.value = ''
+  const searchQuery = ref<string>('')
+
+  const params = computed(() => ({
+    q: searchQuery.value || 'Jakarta',
+    units: 'metric',
+    appid: apiKey,
+  }))
+
+  return {
+    searchQuery,
+    params,
   }
-
-  return { q, $reset }
 })
