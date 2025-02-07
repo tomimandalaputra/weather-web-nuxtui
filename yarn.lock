@@ -505,6 +505,13 @@
   resolved "https://registry.yarnpkg.com/@csstools/utilities/-/utilities-2.0.0.tgz#f7ff0fee38c9ffb5646d47b6906e0bc8868bde60"
   integrity sha512-5VdOr0Z71u+Yp3ozOx8T11N703wIFGVRgOWbOZMKgglPJsWA54MRIoMNVMa7shUToIhx5J8vX4sOZgD2XiihiQ==
 
+"@egoist/tailwindcss-icons@^1.9.0":
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/@egoist/tailwindcss-icons/-/tailwindcss-icons-1.9.0.tgz#ca5af5717673fc185cd94f639d4ccbd2c211bd70"
+  integrity sha512-xWA9cUy6hzlK7Y6TaoRIcwmilSXiTJ8rbXcEdf9uht7yzDgw/yIgF4rThIQMrpD2Y2v4od51+r2y6Z7GStanDQ==
+  dependencies:
+    "@iconify/utils" "^2.2.1"
+
 "@es-joy/jsdoccomment@~0.49.0":
   version "0.49.0"
   resolved "https://registry.yarnpkg.com/@es-joy/jsdoccomment/-/jsdoccomment-0.49.0.tgz#e5ec1eda837c802eca67d3b29e577197f14ba1db"
@@ -770,6 +777,20 @@
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/@iconify-json/heroicons/-/heroicons-1.2.2.tgz#8e03d91655ea6a2d7e1283ba13df13eda50d8bd8"
   integrity sha512-qoW4pXr5kTTL6juEjgTs83OJIwpePu7q1tdtKVEdj+i0zyyVHgg/dd9grsXJQnpTpBt6/VwNjrXBvFjRsKPENg==
+  dependencies:
+    "@iconify/types" "*"
+
+"@iconify-json/iconoir@^1.2.7":
+  version "1.2.7"
+  resolved "https://registry.yarnpkg.com/@iconify-json/iconoir/-/iconoir-1.2.7.tgz#93a1a89e989997c4c12d7c8011652ebbc3324d9b"
+  integrity sha512-UDlx2WeWHqopfKRsjOta6fn/KkOhF0MmI2AxoYfakqtMLlznkTnrtY9QVuXZzsbvk+Gyavq2L39VjhcxGbt+LA==
+  dependencies:
+    "@iconify/types" "*"
+
+"@iconify-json/wi@^1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@iconify-json/wi/-/wi-1.2.1.tgz#5ecd2b6ea4519e11a4096f85b8e97df1d5ab96aa"
+  integrity sha512-I4rLsMC0ta51SzapStkF253WMX7CwjwuAYSa8uWNDOHqM4kYXfkyMbATAQ/oRTOKXiqd/eHCL/RzI5sDvCh8lA==
   dependencies:
     "@iconify/types" "*"
 
@@ -1209,7 +1230,7 @@
     std-env "^3.8.0"
     tinyglobby "^0.2.10"
 
-"@nuxt/kit@3.15.4", "@nuxt/kit@^3.10.3", "@nuxt/kit@^3.13.2", "@nuxt/kit@^3.14.1592", "@nuxt/kit@^3.15.0", "@nuxt/kit@^3.15.1", "@nuxt/kit@^3.15.4":
+"@nuxt/kit@3.15.4", "@nuxt/kit@^3.10.3", "@nuxt/kit@^3.13.2", "@nuxt/kit@^3.14.1592", "@nuxt/kit@^3.15.0", "@nuxt/kit@^3.15.1", "@nuxt/kit@^3.15.4", "@nuxt/kit@^3.9.0":
   version "3.15.4"
   resolved "https://registry.yarnpkg.com/@nuxt/kit/-/kit-3.15.4.tgz#122f511e518573320a035b5e24adf0118d51485d"
   integrity sha512-dr7I7eZOoRLl4uxdxeL2dQsH0OrbEiVPIyBHnBpA4co24CBnoJoF+JINuP9l3PAM3IhUzc5JIVq3/YY3lEc3Hw==
@@ -1465,6 +1486,13 @@
     "@parcel/watcher-win32-arm64" "2.5.1"
     "@parcel/watcher-win32-ia32" "2.5.1"
     "@parcel/watcher-win32-x64" "2.5.1"
+
+"@pinia/nuxt@0.9.0":
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/@pinia/nuxt/-/nuxt-0.9.0.tgz#310deb0fb17a5ca0dc603515695aa40be0a9f6e2"
+  integrity sha512-2yeRo7LeyCF68AbNeL3xu2h6uw0617RkcsYxmA8DJM0R0PMdz5wQHnc44KeENQxR/Mrq8T910XVT6buosqsjBQ==
+  dependencies:
+    "@nuxt/kit" "^3.9.0"
 
 "@pkgjs/parseargs@^0.11.0":
   version "0.11.0"
@@ -2057,7 +2085,7 @@
     "@vue/compiler-dom" "3.5.13"
     "@vue/shared" "3.5.13"
 
-"@vue/devtools-api@^6.6.4":
+"@vue/devtools-api@^6.6.3", "@vue/devtools-api@^6.6.4":
   version "6.6.4"
   resolved "https://registry.yarnpkg.com/@vue/devtools-api/-/devtools-api-6.6.4.tgz#cbe97fe0162b365edc1dba80e173f90492535343"
   integrity sha512-sGhTPMuXqZ1rVOk32RylztWkfXTRhuS7vgAKv0zjqk8gbsHkJ7xfFf+jbySxt7tWObEJwyKaHMikV/WGDiQm8g==
@@ -2157,7 +2185,7 @@
   resolved "https://registry.yarnpkg.com/@vue/shared/-/shared-3.5.13.tgz#87b309a6379c22b926e696893237826f64339b6f"
   integrity sha512-/hnE/qP5ZoGpol0a5mDi45bOd7t3tjYJBjsgCsivow7D48cJeV5l05RD82lPqi7gRiphZM37rnhW1l6ZoCNNnQ==
 
-"@vueuse/core@12.5.0", "@vueuse/core@^12.4.0":
+"@vueuse/core@12.5.0", "@vueuse/core@^12.4.0", "@vueuse/core@^12.5.0":
   version "12.5.0"
   resolved "https://registry.yarnpkg.com/@vueuse/core/-/core-12.5.0.tgz#1321c75132c4f20f223e6313587ebeeec79957f2"
   integrity sha512-GVyH1iYqNANwcahAx8JBm6awaNgvR/SwZ1fjr10b8l1HIgDp82ngNbfzJUgOgWEoxjL+URAggnlilAEXwCOZtg==
@@ -2188,6 +2216,17 @@
   version "12.5.0"
   resolved "https://registry.yarnpkg.com/@vueuse/metadata/-/metadata-12.5.0.tgz#8f1778a2894bdda2bf458054377a379d40276306"
   integrity sha512-Ui7Lo2a7AxrMAXRF+fAp9QsXuwTeeZ8fIB9wsLHqzq9MQk+2gMYE2IGJW48VMJ8ecvCB3z3GsGLKLbSasQ5Qlg==
+
+"@vueuse/nuxt@^12.5.0":
+  version "12.5.0"
+  resolved "https://registry.yarnpkg.com/@vueuse/nuxt/-/nuxt-12.5.0.tgz#c8d5bf3883007650a1d7da083e6013288a774d68"
+  integrity sha512-daqSOlXv5ilAiT5GlRBtfqdkYjeMO9P6n50OpbEVm9hXmfXmZoXK3YMND8l5n5KcscD4pnD66IrYPqqOW5eH1Q==
+  dependencies:
+    "@nuxt/kit" "^3.15.1"
+    "@vueuse/core" "12.5.0"
+    "@vueuse/metadata" "12.5.0"
+    local-pkg "^1.0.0"
+    vue "^3.5.13"
 
 "@vueuse/shared@12.5.0":
   version "12.5.0"
@@ -5864,6 +5903,14 @@ pify@^2.3.0:
   resolved "https://registry.yarnpkg.com/pify/-/pify-2.3.0.tgz#ed141a6ac043a849ea588498e7dca8b15330e90c"
   integrity sha512-udgsAY+fTnvv7kI7aaxbqwWNb0AHiB0qBO89PZKPkoTmGOgdbrHDKD+0B2X4uTfJ/FT1R09r9gTsjUjNJotuog==
 
+pinia@^2.3.1:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/pinia/-/pinia-2.3.1.tgz#54c476675b72f5abcfafa24a7582531ea8c23d94"
+  integrity sha512-khUlZSwt9xXCaTbbxFYBKDc/bWAGWJjOgvxETwkTN7KRm66EeT1ZdZj6i2ceh9sP2Pzqsbc704r2yngBrxBVug==
+  dependencies:
+    "@vue/devtools-api" "^6.6.3"
+    vue-demi "^0.14.10"
+
 pirates@^4.0.1:
   version "4.0.6"
   resolved "https://registry.yarnpkg.com/pirates/-/pirates-4.0.6.tgz#3018ae32ecfcff6c29ba2267cbf21166ac1f36b9"
@@ -7589,6 +7636,11 @@ vue-bundle-renderer@^2.1.1:
   integrity sha512-+qALLI5cQncuetYOXp4yScwYvqh8c6SMXee3B+M7oTZxOgtESP0l4j/fXdEJoZ+EdMxkGWIj+aSEyjXkOdmd7g==
   dependencies:
     ufo "^1.5.4"
+
+vue-demi@^0.14.10:
+  version "0.14.10"
+  resolved "https://registry.yarnpkg.com/vue-demi/-/vue-demi-0.14.10.tgz#afc78de3d6f9e11bf78c55e8510ee12814522f04"
+  integrity sha512-nMZBOwuzabUO0nLgIcc6rycZEebF6eeUfaiQx9+WSk8e29IbLvPU9feI6tqW4kTo3hvoYAJkMh8n8D0fuISphg==
 
 vue-devtools-stub@^0.1.0:
   version "0.1.0"

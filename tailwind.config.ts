@@ -1,5 +1,5 @@
 import type { Config } from 'tailwindcss'
-// import { getIconCollections, iconsPlugin } from '@egoist/tailwindcss-icons'
+import { getIconCollections, iconsPlugin } from '@egoist/tailwindcss-icons'
 
 const colors = {} as const
 
@@ -16,8 +16,8 @@ export default <Partial<Config>>{
   },
   plugins: [
     // Select the icon collections at https://icones.js.org/ when you want to use
-    // iconsPlugin({
-    //   collections: getIconCollections(['mdi', 'svg-spinners']),
-    // }),
+    iconsPlugin({
+      collections: getIconCollections(['heroicons', 'iconoir', 'wi']),
+    }),
   ],
 }

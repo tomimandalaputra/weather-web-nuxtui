@@ -1,6 +1,12 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ['@nuxt/ui', '@nuxt/eslint', '@nuxtjs/google-fonts'],
+  modules: [
+    '@nuxt/ui',
+    '@nuxt/eslint',
+    '@nuxtjs/google-fonts',
+    '@pinia/nuxt',
+    '@vueuse/nuxt',
+  ],
   components: [
     '~/components',
   ],
@@ -13,6 +19,12 @@ export default defineNuxtConfig({
   ],
   colorMode: {
     preference: 'light',
+  },
+  runtimeConfig: {
+    apiBaseUrl: '',
+    public: {
+      apiKey: '',
+    },
   },
   compatibilityDate: '2025-02-05',
   nitro: {
@@ -46,5 +58,8 @@ export default defineNuxtConfig({
     families: {
       Montserrat: '100..900',
     },
+  },
+  pinia: {
+    storesDirs: ['./stores/**'],
   },
 })
