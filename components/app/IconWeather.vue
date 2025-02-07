@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { CodeIcon } from '~/types/responses/base_response_type'
+import type { CodeIcon } from '~/types/responses/weather_response'
 
 defineProps({
   codeIcon: {
