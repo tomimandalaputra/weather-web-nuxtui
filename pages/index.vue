@@ -31,7 +31,7 @@ const { data: currentForecast, refresh: refreshForecast } = useApi<ResponseForec
   transform: (data) => {
     return {
       ...data,
-      list: data?.list.filter((_, index) => index % 8 === 0),
+      list: data?.list.filter((_, index) => index % 7 === 0),
     }
   },
 })
@@ -62,7 +62,7 @@ watchDebounced(
       </h4>
 
       <div class="grid grid-cols-12 gap-4 mb-10">
-        <div class="col-span-12 sm:col-span-4 md:col-span-3 lg:col-span-2">
+        <div class="col-span-12 md:col-span-6 lg:col-span-4">
           <UCard class="h-full flex items-center">
             <h3 class="text-lg font-bold">
               {{ currentWeather.name }}, {{ currentWeather.sys.country }}
@@ -169,7 +169,7 @@ watchDebounced(
         <div
           v-for="(data, i) in currentForecast.list"
           :key="i"
-          class="col-span-6 sm:col-span-3 lg:col-span-2"
+          class="col-span-6 sm:col-span-4 md:col-span-3 lg:col-span-2"
         >
           <UCard class="text-center">
             <template #header>
