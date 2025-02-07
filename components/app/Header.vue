@@ -24,7 +24,7 @@ const store = useWeatherStore()
           />
           Rumah Cuaca
         </h4>
-        <p class="text-xs font-medium text-primary">by spacegamesindo</p>
+        <p class="text-xs font-medium text-primary">by tukucode</p>
       </NuxtLink>
 
       <div class="md:order-2">
