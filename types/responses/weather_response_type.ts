@@ -1,24 +1,4 @@
-// https://openweathermap.org/weather-conditions
-export enum CodeIcon {
-  '01d' = '01d',
-  '02d' = '02d',
-  '03d' = '03d',
-  '04d' = '04d',
-  '09d' = '09d',
-  '10d' = '10d',
-  '11d' = '11d',
-  '13d' = '13d',
-  '50d' = '50d',
-  '01n' = '01n',
-  '02n' = '02n',
-  '03n' = '03n',
-  '04n' = '04n',
-  '09n' = '09n',
-  '10n' = '10n',
-  '11n' = '11n',
-  '13n' = '13n',
-  '50n' = '50n',
-}
+import type { CodeIcon } from '~/types/components/icon_weather_type'
 
 export interface Coord {
   lon: number
